@@ -27,3 +27,10 @@ urls = [
 
 for url in urls:
     print(check_url(url))
+if __name__ == "__main__":
+    import sys
+    urls = sys.argv[1:] or [input("Введи ссылку: ").strip()]
+    for url in urls:
+        result = check_url(url)
+        if result:
+            print(result)
